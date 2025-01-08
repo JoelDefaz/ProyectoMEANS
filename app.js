@@ -15,9 +15,9 @@ app.use((req,res,next)=>{
     next();
 });
 
-app.use("/inicio",libroRoutes);
+app.use("/",libroRoutes);
 
-app.get('/',(req,res)=>{
+app.get('/inicio',(req,res)=>{
     res.status(501).send("<h1>Hola</h1>");
 })
 module.exports=app;

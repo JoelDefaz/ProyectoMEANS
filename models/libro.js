@@ -1,5 +1,6 @@
-var moongose = require('mongoose');
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+
 var LibroSchema = Schema({
     nombre : String,
     autor: String,
@@ -9,4 +10,4 @@ var LibroSchema = Schema({
     imagen : String
 });
 
-module.exports=moongose.model('Libro',LibroSchema)
+module.exports=mongoose.model('Libro',LibroSchema)
