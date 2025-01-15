@@ -28,7 +28,7 @@ export class LibroService {
     }
     //ver libro
 //http://localhost:3600/libro/:id
-getLibro(id:string):Observable<any>{
+getLibro(id:String):Observable<any>{
     let headers=new HttpHeaders().set('Content-Type','application/json');
     return this._http.get(this.url+'libro/'+id,{headers:headers});
 }
@@ -41,7 +41,7 @@ updateLibro(libro:Libro):Observable<any>{
 }
 //eliminar libro
 //http://localhost:3600/libro/:id
-deleteLibro(id:string):Observable<any>{
+deleteLibro(id:String):Observable<any>{
     let headers=new HttpHeaders().set('Content-Type','application/json');
     return this._http.delete(this.url+'libro/'+id,{headers:headers});
 }
