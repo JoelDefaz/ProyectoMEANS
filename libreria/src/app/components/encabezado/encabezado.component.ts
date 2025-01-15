@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-encabezado',
   imports: [],
   templateUrl: './encabezado.component.html',
-  styleUrl: './encabezado.component.css'
+  styleUrl: './encabezado.component.css',
+  standalone: true,
 })
 export class EncabezadoComponent {
 

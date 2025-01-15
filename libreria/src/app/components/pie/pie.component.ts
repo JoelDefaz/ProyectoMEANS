@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-pie',
   imports: [],
   templateUrl: './pie.component.html',
-  styleUrl: './pie.component.css'
+  styleUrl: './pie.component.css',
+  standalone: true,
 })
 export class PieComponent {
 

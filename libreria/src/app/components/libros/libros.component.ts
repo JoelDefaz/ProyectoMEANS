@@ -3,10 +3,12 @@ import { LibroService } from '../../services/libro.services';
 import { Global } from '../../services/global';
 import { Libro } from '../../models/libro';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-libros',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, HttpClientModule],
   templateUrl: './libros.component.html',
   styleUrl: './libros.component.css',
   providers: [LibroService]
@@ -27,8 +29,8 @@ export class LibrosComponent implements OnInit{
   getLibros(){
     this._libroService.getLibros().subscribe(
       response => {
-        if(response.libros){
-          this.libros = response.libros;
+        if(response.libro){
+          this.libros = response.libro;
         }
       },
       error=>{

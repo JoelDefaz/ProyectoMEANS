@@ -3,7 +3,7 @@ var port='3600';
 mongoose.promise=global.Promise;
 var app=require('./app');
 mongoose.set("strictQuery",false);
-mongoose.connect('mongodb://127.0.0.1:27017/libreria')
+mongoose.connect(process.env.MONGO_URI)
 .then(() =>{
     console.log('Conectado a la base de datos');
     app.listen(port, () => {

@@ -119,6 +119,7 @@ var controller = {
             return res.status(200).send({message: fileName});
           }
         } catch (err) {
+            console.log(err.message);
           return res.status(500).send({ message: 'La imagen no se ha subido' });
         }
       },
