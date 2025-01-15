@@ -13,7 +13,7 @@ var controller = {
             if (!libroStored || libroStored.length === 0) {
                 return res.status(404).send({ message: 'No se obtuvo ningun dato' });
             
-            
+            }
             return res.status(200).send({ libro: libroStored });
         } catch (error) {
             return res.status(500).send({ message: 'Error al obtener los datos', error });
